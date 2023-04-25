@@ -5,17 +5,11 @@ function AuthPanel() {
   const { supabase, session } = useSupabase();
 
   const handleSignUpWithEmail = async () => {
-    const { error } = await supabase.auth.signUp({
-      email: 'willy14620@gmail.com',
-      password: 'qwertyuiop424',
-    });
+    const { error } = await supabase.auth.signUp({});
   };
 
   const handleSignInWithEmail = async () => {
-    const { error } = await supabase.auth.signInWithPassword({
-      email: 'willy14620@gmail.com',
-      password: 'qwertyuiop424',
-    });
+    const { error } = await supabase.auth.signInWithPassword({});
   };
 
   const handleSignOut = async () => {
